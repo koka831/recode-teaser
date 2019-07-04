@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link href="./style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="app">
+        <div v-if="isFinished">RE<span class="blink">:</span>{{ message }}</div>
+        <div />
+        <div v-if="isFinished">
+          <!-- RE<span class="blink">:</span>CODE -->
+          <div>RE:BORN PROJECT</div>
+          <div class="bottom">COMING SOON</div>
+        </div>
+      </div>
+    </div>
+    <div class="white" />
+  </body>
+</html>
+<script>
+  let app = new Vue({
+    el: '#app',
+    data() {
+      return {
+        text: [
+          '',
+          'NEWAL',
+          'VISE',
+          'VIVE',
+          'MEMBER',
+          'ORGANIZE',
+          'STORE',
+          'NEWAL',
+          'COVER',
+          'PLAY',
+          'START',
+          'Re:Re:',
+          'CODE'
+        ],
+        time: 0,
+        isFinished: false
+      }
+    },
+    computed: {
+      message() {
+        return this.text[this.time % this.text.length]
+      }
+    },
+    mounted() {
+      this.isFinished = false
+      setInterval(() => { this.time += 1 }, 1500, this.text.length - 1)
+      this.isFinished = true
+    }
+  })
+</script>
