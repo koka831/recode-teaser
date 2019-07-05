@@ -4,37 +4,37 @@ body {
   background: #282828;
   font-family: 'Orbitron', sans-serif;
   color: #fabd2f;
-  font-size: 9vw;
+  font-size: 8vw;
   font-weight: bold;
   letter-spacing: 0.05em;
   line-height: 1.1em;
 }
 
 .wrapper {
-  padding: 10vw 10vw;
   box-sizing: border-box;
   vertical-align: middle;
 }
 
 #app {
-  margin: 0 auto;
+  position: relative;
+  margin-top: 10vh;
+  margin-left: 10vw;
+  background: #3c3836;
+  width: 80vw;
+  height: 80vh;
 }
 
-.white {
-  background: #3c3836;
-  width: 75vw;
-  height: 74vw;
+.top {
   position: absolute;
-  top: 15vw;
-  left: 15vw;
-  z-index: -1;
+  margin-top: -3vh;
+  margin-left: -3vw;
 }
 
 .bottom {
   color: #458588;
   position: absolute;
-  top: 88vh;
-  right: 6vw;
+  bottom: -5vh;
+  right: -3vw;
 }
 
 .blink {
