@@ -8,11 +8,10 @@
   <body>
     <div class="wrapper">
       <div id="app">
-        <div v-if="isFinished">RE<span class="blink">:</span>{{ message }}</div>
-        <div />
-        <div v-if="isFinished">
-          <!-- RE<span class="blink">:</span>CODE -->
-          <div>RE:BORN PROJECT</div>
+        <div>RE:CODE</div>
+        RE<span class="blink">:</span>{{ message }}
+        <div> PROJECT</div>
+        <div>
           <div class="bottom">COMING SOON</div>
         </div>
       </div>
@@ -29,7 +28,7 @@
           '',
           'NEWAL',
           'VISE',
-          'VIVE',
+          'VIVAL',
           'MEMBER',
           'ORGANIZE',
           'STORE',
@@ -37,11 +36,11 @@
           'COVER',
           'PLAY',
           'START',
-          'Re:Re:',
-          'CODE'
+          'BORN',
+          'BORN',
+          'BORN'
         ],
-        time: 0,
-        isFinished: false
+        time: 0
       }
     },
     computed: {
@@ -50,9 +49,11 @@
       }
     },
     mounted() {
-      this.isFinished = false
-      setInterval(() => { this.time += 1 }, 1500, this.text.length - 1)
-      this.isFinished = true
+      setInterval(() => {
+        for (let i = 0; i <= this.text.length; i++) {
+          setTimeout(() => { this.time += 1 }, 15 * i)
+        }
+      }, 1500)
     }
   })
 </script>
